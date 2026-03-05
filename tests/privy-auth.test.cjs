@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const test = require('node:test');
 const {
   AuthError,
+  createPrivyAuthFromEnv,
   InMemoryNonceStore,
   PrivyAuthService,
 } = require('../dist/privy-auth.js');
@@ -66,6 +67,15 @@ test('reused nonce is rejected', async () => {
   );
 });
 
+test('missing nonce is rejected before token verification', async () => {
+  const { service } = createService();
+
+  await assert.rejects(
+    () => service.authenticate('privy.jwt.token', ''),
+    (error) => error instanceof AuthError && error.code === 'MISSING_NONCE',
+  );
+});
+
 test('expired session token is rejected', async () => {
   const { service, advance } = createService();
 
@@ -88,4 +98,58 @@ test('session token signature tampering is rejected', async () => {
     () => service.verifySessionToken(tampered),
     (error) => error instanceof AuthError && error.code === 'INVALID_SESSION_SIGNATURE',
   );
+});
+
+test('session audience mismatch is rejected', async () => {
+  const { service } = createService();
+  const sessionToken = await service.authenticate('privy.jwt.token', 'nonce-audience');
+
+  const verifier = new PrivyAuthService(
+    {
+      appId: 'other-app-id',
+      appSecret: 'test-secret',
+      audience: 'other-app-id',
+      issuer: 'https://auth.privy.io/api/v1/apps/test-app-id',
+      sessionIssuer: 'test-session-issuer',
+      sessionTtlSeconds: 60,
+      clockToleranceSeconds: 0,
+    },
+    {
+      now: () => 1_700_000_000,
+    },
+  );
+
+  await assert.rejects(
+    () => verifier.verifySessionToken(sessionToken),
+    (error) => error instanceof AuthError && error.code === 'INVALID_SESSION_AUDIENCE',
+  );
+});
+
+test('env factory reads explicit session settings', async () => {
+  const service = createPrivyAuthFromEnv(
+    {
+      PRIVY_APP_ID: 'env-app-id',
+      PRIVY_APP_SECRET: 'env-secret',
+      PRIVY_ISSUER: 'https://auth.privy.io/api/v1/apps/env-app-id',
+      PRIVY_AUDIENCE: 'env-app-id',
+      SESSION_ISSUER: 'env-session-issuer',
+      SESSION_TTL_SECONDS: '120',
+      CLOCK_TOLERANCE_SECONDS: '2',
+      JWKS_CACHE_SECONDS: '30',
+    },
+    {
+      tokenVerifier: async () => ({
+        subject: 'did:privy:env-user',
+        claims: { sub: 'did:privy:env-user' },
+      }),
+      now: () => 1_700_000_000,
+    },
+  );
+
+  const sessionToken = await service.authenticate('privy.jwt.token', 'nonce-env');
+  const payload = await service.verifySessionToken(sessionToken);
+
+  assert.equal(payload.iss, 'env-session-issuer');
+  assert.equal(payload.aud, 'env-app-id');
+  assert.equal(payload.exp, 1_700_000_120);
 });
