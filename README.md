@@ -1,6 +1,6 @@
 # Base Chain Tools
 
-A JavaScript/TypeScript library for interacting with the Base blockchain ecosystem. This package provides utilities and helper functions for working with Base's L2 features.
+TypeScript utilities for Base chain operations and server-side Privy auth.
 
 ## Installation
 
@@ -8,63 +8,68 @@ A JavaScript/TypeScript library for interacting with the Base blockchain ecosyst
 npm install base-chain-tools
 ```
 
-## Usage
+## Base Chain Usage
 
-```typescript
-import { BaseChain, BaseChainConfig, L2BridgeConfig } from 'base-chain-tools';
+```ts
+import { BaseChain } from 'base-chain-tools';
 
-// Initialize Base chain connection
-const config: BaseChainConfig = {
+const baseChain = new BaseChain({
   rpcUrl: 'https://mainnet.base.org',
   chainId: 8453,
-  name: 'Base Mainnet'
-};
+  name: 'Base Mainnet',
+});
 
-const baseChain = new BaseChain(config);
-
-// Check L2 status
 const isL2Active = await baseChain.getL2Status();
-
-// Bridge tokens to L2
-const bridgeConfig: L2BridgeConfig = {
-  l1BridgeAddress: '0x...',
-  l2BridgeAddress: '0x...',
-  tokenAddress: '0x...'
-};
-
-const bridgeTx = await baseChain.bridgeToL2(bridgeConfig, '1.0');
-
-// Utility functions
-import { formatWei, parseWei, isValidAddress, getBaseChainId } from 'base-chain-tools';
-
-const weiAmount = parseWei('1.0'); // Convert ETH to Wei
-const ethAmount = formatWei(weiAmount); // Convert Wei to ETH
-const isValid = isValidAddress('0x...'); // Validate address
-const chainId = getBaseChainId(); // Get Base mainnet chain ID
 ```
 
-## Features
+## Privy Auth (Server Side)
 
-- Base chain connection management
-- L2 interaction utilities
-- Token bridging helpers
-- Wei/Ether conversion utilities
-- Address validation
-- TypeScript support
+### 1) Environment
+
+```bash
+PRIVY_APP_ID=...
+PRIVY_APP_SECRET=...
+PRIVY_ISSUER=https://auth.privy.io/api/v1/apps/<app_id>
+PRIVY_AUDIENCE=<app_id>
+SESSION_ISSUER=robin-base-tools
+SESSION_TTL_SECONDS=3600
+CLOCK_TOLERANCE_SECONDS=5
+JWKS_CACHE_SECONDS=300
+```
+
+### 2) Authenticate with Privy token + nonce
+
+```ts
+import { PrivyAuthService } from 'base-chain-tools';
+
+const auth = new PrivyAuthService({
+  appId: process.env.PRIVY_APP_ID!,
+  appSecret: process.env.PRIVY_APP_SECRET!,
+  issuer: process.env.PRIVY_ISSUER,
+  audience: process.env.PRIVY_AUDIENCE,
+});
+
+const sessionToken = await auth.authenticate(privyTokenFromClient, nonceFromClient);
+```
+
+### 3) Verify app session in protected APIs
+
+```ts
+const session = await auth.verifySessionToken(sessionToken);
+console.log(session.sub);
+```
+
+## Security Notes
+
+- Verifies Privy JWT signature against issuer JWKS.
+- Checks `iss`, `aud`, `sub`, `exp`, `nbf`, `iat` with configurable clock tolerance.
+- Uses one-time nonce consumption to block replay.
+- Signs app sessions with HS256 and validates signature + claims on read.
+- Default nonce store is in-memory; replace with Redis/DB for multi-instance deployments.
 
 ## Development
 
 ```bash
-# Install dependencies
-npm install
-
-# Run tests
-npm test
-
-# Build
 npm run build
+npm test
 ```
-
-## License
-
-MIT License - see LICENSE file for details

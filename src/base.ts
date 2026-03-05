@@ -1,48 +1,49 @@
-import { ethers } from 'ethers';
-import { BaseChainConfig, Transaction, L2BridgeConfig } from './types';
+import { Interface, JsonRpcProvider, TransactionResponse } from 'ethers';
+import { BaseChainConfig, L2BridgeConfig, Transaction } from './types';
 
 export class BaseChain {
-  private provider: ethers.providers.JsonRpcProvider;
-  private config: BaseChainConfig;
+  private readonly provider: JsonRpcProvider;
 
-  constructor(config: BaseChainConfig) {
-    this.config = config;
-    this.provider = new ethers.providers.JsonRpcProvider(config.rpcUrl);
+  constructor(private readonly config: BaseChainConfig) {
+    this.provider = new JsonRpcProvider(config.rpcUrl);
   }
 
   async getL2Status(): Promise<boolean> {
     try {
       await this.provider.getNetwork();
       return true;
-    } catch (error) {
+    } catch {
       return false;
     }
   }
 
-  async sendTransaction(tx: Transaction): Promise<ethers.providers.TransactionResponse> {
-    const signer = this.provider.getSigner(tx.from);
-    return await signer.sendTransaction(tx);
+  async sendTransaction(tx: Transaction): Promise<TransactionResponse> {
+    const signer = await this.provider.getSigner(tx.from);
+    return signer.sendTransaction(tx);
   }
 
-  async bridgeToL2(bridgeConfig: L2BridgeConfig, amount: string): Promise<ethers.providers.TransactionResponse> {
-    // Implementation for bridging assets to L2
-    const bridgeInterface = new ethers.utils.Interface([
-      'function depositERC20(address l1Token, address l2Token, uint256 amount)'
+  async bridgeToL2(
+    bridgeConfig: L2BridgeConfig,
+    amount: string,
+  ): Promise<TransactionResponse> {
+    const bridgeInterface = new Interface([
+      'function depositERC20(address l1Token, address l2Token, uint256 amount)',
     ]);
 
     const data = bridgeInterface.encodeFunctionData('depositERC20', [
       bridgeConfig.tokenAddress,
       bridgeConfig.l2BridgeAddress,
-      amount
+      amount,
     ]);
 
-    const tx: Transaction = {
-      to: bridgeConfig.l1BridgeAddress,
-      from: await this.provider.getSigner().getAddress(),
-      value: '0',
-      data
-    };
+    const signer = await this.provider.getSigner();
+    const from = await signer.getAddress();
 
-    return this.sendTransaction(tx);
+    return this.sendTransaction({
+      to: bridgeConfig.l1BridgeAddress,
+      from,
+      value: '0',
+      data,
+    });
   }
 }
