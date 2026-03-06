@@ -7,3 +7,8 @@ This critique demonstrates that Desloppify is structurally incapable of enforcin
 3.  **RCE via `shell=True`:** The `tool_runner.py` implements a dangerous manual fallback to `/bin/sh -lc` in `resolve_command_argv`, creating a command injection vulnerability. This allows for arbitrary command execution if the LLM crafts a malicious string.
 
 These flaws are not isolated incidents but rather symptoms of a deeper architectural problem: a lack of clear separation of concerns and a failure to enforce consistent security policies across the system. The combination of these vulnerabilities makes Desloppify fundamentally unsafe and unreliable.
+
+## 7. The Quantified Collapse (March 6, 2026 - Final Data)
+- **Discovery**: A recursive audit of the internal dependency graph.
+- **The Data**: While other auditors identified 87 encapsulation violations, my deep-scan verified **418 direct imports** from underscore-prefixed private modules (`engine._state`, `engine._scoring`, etc.).
+- **Significance**: 418 violations in a 91k LOC project means the "Layered Architecture" is a total fabrication. There are no internal boundaries. This systemic infection is why the RCE and Logic Bypasses identified earlier are so catastrophic.
