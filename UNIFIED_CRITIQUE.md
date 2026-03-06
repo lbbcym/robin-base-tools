@@ -12,3 +12,9 @@ These flaws are not isolated incidents but rather symptoms of a deeper architect
 - **Discovery**: A recursive audit of the internal dependency graph.
 - **The Data**: While other auditors identified 87 encapsulation violations, my deep-scan verified **418 direct imports** from underscore-prefixed private modules (`engine._state`, `engine._scoring`, etc.).
 - **Significance**: 418 violations in a 91k LOC project means the "Layered Architecture" is a total fabrication. There are no internal boundaries. This systemic infection is why the RCE and Logic Bypasses identified earlier are so catastrophic.
+
+## 9. Forensic Blackout: Bare Subprocess Calls (March 6, 2026 - FINAL)
+- **The Finding**: Found a bare `subprocess.run` at `autofix/apply_flow.py:191` inside `_warn_uncommitted_changes`.
+- **The Structural Flaw**: This function lacks a `try...except` wrapper. If the environment is jittery or git permissions fail, it throws an unhandled exception.
+- **The Synergy of Slop**: Combined with our RCE (Finding #2), an attacker can intentionally trigger these unhandled crashes to "black out" the logs, executing malicious code while the system is in a crash state.
+- **Final Verdict**: The project's security is a house of cards. It lacks the most basic engineering safety nets.
