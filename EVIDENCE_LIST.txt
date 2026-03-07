@@ -1,0 +1,418 @@
+./target-hunt/desloppify/intelligence/integrity.py:11:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/intelligence/review/context.py:15:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/context_builder.py:9:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/__init__.py:13:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/importing/holistic.py:8:from desloppify.engine._scoring.policy.core import HOLISTIC_POTENTIAL
+./target-hunt/desloppify/intelligence/review/importing/holistic.py:9:from desloppify.engine._state.merge import MergeScanOptions, merge_scan
+./target-hunt/desloppify/intelligence/review/importing/holistic.py:10:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/importing/per_file.py:9:from desloppify.engine._state.filtering import make_issue
+./target-hunt/desloppify/intelligence/review/importing/per_file.py:10:from desloppify.engine._state.merge import MergeScanOptions, merge_scan
+./target-hunt/desloppify/intelligence/review/importing/per_file.py:11:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/importing/cache.py:9:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/importing/assessments.py:8:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/importing/state_helpers.py:5:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/importing/holistic_cache.py:8:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/importing/holistic_issue_flow.py:8:from desloppify.engine._state.filtering import make_issue
+./target-hunt/desloppify/intelligence/review/importing/holistic_issue_flow.py:9:from desloppify.engine._state.schema import Issue, StateModel
+./target-hunt/desloppify/intelligence/review/importing/resolution.py:8:from desloppify.engine._state.schema import Issue, StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/remediation.py:7:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/context_holistic/mechanical.py:12:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/context_holistic/selection_contexts.py:19:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/_prepare/issue_history.py:11:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/intelligence/review/_prepare/remediation_engine.py:13:from desloppify.engine._state.schema import Issue, StateModel, utc_now
+./target-hunt/desloppify/intelligence/review/_prepare/remediation_engine.py:14:from desloppify.engine._state.schema_scores import (
+./target-hunt/desloppify/intelligence/review/dimensions/metadata_legacy.py:5:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/intelligence/narrative/dimensions.py:5:from desloppify.engine._scoring.detection import merge_potentials
+./target-hunt/desloppify/intelligence/narrative/dimensions.py:6:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/intelligence/narrative/dimensions.py:10:from desloppify.engine._scoring.results.core import compute_score_impact
+./target-hunt/desloppify/intelligence/narrative/action_engine.py:8:from desloppify.engine._scoring.detection import merge_potentials
+./target-hunt/desloppify/intelligence/narrative/action_engine.py:9:from desloppify.engine._scoring.results.core import compute_score_impact
+./target-hunt/desloppify/intelligence/narrative/action_engine_routing.py:8:from desloppify.engine._scoring.results.core import get_dimension_for_detector
+./target-hunt/desloppify/engine/_plan/commit_tracking.py:8:from desloppify.engine._plan.schema import CommitRecord
+./target-hunt/desloppify/engine/_plan/commit_tracking.py:9:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/engine/_plan/commit_tracking.py:119:        from desloppify.engine._scoring.results.core import compute_health_score
+./target-hunt/desloppify/engine/_plan/operations_cluster.py:5:from desloppify.engine._plan.operations_queue import move_items
+./target-hunt/desloppify/engine/_plan/operations_cluster.py:6:from desloppify.engine._plan.schema import Cluster, PlanModel, ensure_plan_defaults
+./target-hunt/desloppify/engine/_plan/operations_cluster.py:7:from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/engine/_plan/reconcile.py:8:from desloppify.engine._plan.annotations import get_issue_note
+./target-hunt/desloppify/engine/_plan/reconcile.py:9:from desloppify.engine._plan.operations_meta import append_log_entry
+./target-hunt/desloppify/engine/_plan/reconcile.py:10:from desloppify.engine._plan.operations_skip import resurface_stale_skips
+./target-hunt/desloppify/engine/_plan/reconcile.py:11:from desloppify.engine._plan.promoted_ids import prune_promoted_ids
+./target-hunt/desloppify/engine/_plan/reconcile.py:12:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/_plan/reconcile.py:18:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/engine/_plan/reconcile.py:23:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/engine/_plan/auto_cluster_sync.py:8:from desloppify.engine._plan.cluster_strategy import (
+./target-hunt/desloppify/engine/_plan/auto_cluster_sync.py:14:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/engine/_plan/auto_cluster_sync.py:20:from desloppify.engine._plan.subjective_policy import (
+./target-hunt/desloppify/engine/_plan/auto_cluster_sync.py:24:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_plan/epic_triage_apply.py:7:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/_plan/epic_triage_apply.py:13:from desloppify.engine._plan.stale_dimensions import review_issue_snapshot_hash
+./target-hunt/desloppify/engine/_plan/epic_triage_apply.py:14:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/engine/_plan/stale_policy.py:8:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_plan/stale_policy.py:9:from desloppify.engine._work_queue.helpers import slugify
+./target-hunt/desloppify/engine/_plan/subjective_policy.py:14:from desloppify.engine._state.filtering import issue_in_scan_scope
+./target-hunt/desloppify/engine/_plan/subjective_policy.py:15:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_plan/subjective_policy.py:90:    from desloppify.engine._plan.stale_policy import (
+./target-hunt/desloppify/engine/_plan/operations_queue.py:5:from desloppify.engine._plan.promoted_ids import add_promoted_ids
+./target-hunt/desloppify/engine/_plan/operations_queue.py:6:from desloppify.engine._plan.schema import PlanModel, SkipEntry, ensure_plan_defaults
+./target-hunt/desloppify/engine/_plan/operations_queue.py:105:    from desloppify.engine._plan.stale_dimensions import TRIAGE_IDS
+./target-hunt/desloppify/engine/_plan/persistence.py:13:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/_plan/persistence.py:20:from desloppify.engine._state.schema import STATE_DIR, json_default, utc_now
+./target-hunt/desloppify/engine/_plan/epic_triage_parsing.py:7:from desloppify.engine._plan.schema import VALID_EPIC_DIRECTIONS
+./target-hunt/desloppify/engine/_plan/auto_cluster.py:6:from desloppify.engine._plan.constants import AUTO_PREFIX
+./target-hunt/desloppify/engine/_plan/auto_cluster.py:7:from desloppify.engine._plan.auto_cluster_sync import (
+./target-hunt/desloppify/engine/_plan/auto_cluster.py:12:from desloppify.engine._plan.schema import PlanModel, ensure_plan_defaults
+./target-hunt/desloppify/engine/_plan/auto_cluster.py:13:from desloppify.engine._plan.subjective_policy import SubjectiveVisibility
+./target-hunt/desloppify/engine/_plan/auto_cluster.py:14:from desloppify.engine._state.schema import StateModel, utc_now
+./target-hunt/desloppify/engine/_plan/cluster_strategy.py:8:from desloppify.engine._plan.constants import AUTO_PREFIX
+./target-hunt/desloppify/engine/_plan/operations_meta.py:5:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/_plan/operations_meta.py:10:from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/engine/_plan/operations_lifecycle.py:5:from desloppify.engine._plan.promoted_ids import prune_promoted_ids
+./target-hunt/desloppify/engine/_plan/operations_lifecycle.py:6:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/_plan/operations_lifecycle.py:12:from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/engine/_plan/epic_triage.py:10:from desloppify.engine._plan.schema import PlanModel, ensure_plan_defaults
+./target-hunt/desloppify/engine/_plan/epic_triage.py:11:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_plan/stale_dimensions.py:15:from desloppify.engine._plan import stale_policy as stale_policy_mod
+./target-hunt/desloppify/engine/_plan/stale_dimensions.py:16:from desloppify.engine._plan.promoted_ids import promoted_insertion_index
+./target-hunt/desloppify/engine/_plan/stale_dimensions.py:17:from desloppify.engine._plan.schema import PlanModel, ensure_plan_defaults
+./target-hunt/desloppify/engine/_plan/stale_dimensions.py:18:from desloppify.engine._plan.subjective_policy import (
+./target-hunt/desloppify/engine/_plan/stale_dimensions.py:22:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_plan/epic_triage_prompt.py:8:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/_plan/epic_triage_prompt.py:14:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_plan/schema_migrations.py:7:from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/engine/_plan/schema_migrations.py:126:    from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/engine/_plan/operations_skip.py:5:from desloppify.engine._plan.operations_queue import _remove_id_from_lists
+./target-hunt/desloppify/engine/_plan/operations_skip.py:6:from desloppify.engine._plan.promoted_ids import prune_promoted_ids
+./target-hunt/desloppify/engine/_plan/operations_skip.py:7:from desloppify.engine._plan.schema import PlanModel, SkipEntry, ensure_plan_defaults
+./target-hunt/desloppify/engine/_plan/operations_skip.py:8:from desloppify.engine._plan.skip_policy import skip_kind_needs_state_reopen
+./target-hunt/desloppify/engine/_plan/operations_skip.py:9:from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/engine/_plan/step_parser.py:9:    from desloppify.engine._plan.schema import ActionStep
+./target-hunt/desloppify/engine/_plan/schema.py:7:from desloppify.engine._plan.schema_migrations import (
+./target-hunt/desloppify/engine/_plan/schema.py:10:from desloppify.engine._plan.skip_policy import VALID_SKIP_KINDS
+./target-hunt/desloppify/engine/_plan/schema.py:11:from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/engine/planning/scorecard_projection.py:7:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/engine/planning/select.py:5:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/engine/planning/queue_policy.py:8:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/planning/queue_policy.py:9:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/engine/planning/dimension_rows.py:9:from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/engine/planning/render_items.py:8:from desloppify.engine._work_queue.core import QueueBuildOptions, build_work_queue
+./target-hunt/desloppify/engine/planning/render_sections.py:7:from desloppify.engine._plan.annotations import get_issue_description, get_issue_note
+./target-hunt/desloppify/engine/planning/render_sections.py:8:from desloppify.engine._plan.skip_policy import (
+./target-hunt/desloppify/engine/planning/render.py:10:from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/engine/planning/render.py:11:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/engine/planning/render.py:12:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/engine/_work_queue/plan_order.py:8:from desloppify.engine._plan.annotations import (
+./target-hunt/desloppify/engine/_work_queue/plan_order.py:13:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/_work_queue/context.py:19:from desloppify.engine._plan.subjective_policy import (
+./target-hunt/desloppify/engine/_work_queue/context.py:23:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_work_queue/ranking_output.py:7:from desloppify.engine._work_queue.helpers import detail_dict, workflow_stage_name
+./target-hunt/desloppify/engine/_work_queue/ranking_output.py:8:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/_work_queue/ranking.py:9:from desloppify.engine._scoring.results.health import compute_health_breakdown
+./target-hunt/desloppify/engine/_work_queue/ranking.py:10:from desloppify.engine._scoring.results.impact import get_dimension_for_detector
+./target-hunt/desloppify/engine/_work_queue/ranking.py:11:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_work_queue/ranking.py:12:from desloppify.engine._work_queue.helpers import (
+./target-hunt/desloppify/engine/_work_queue/ranking.py:25:from desloppify.engine._work_queue.ranking_output import (
+./target-hunt/desloppify/engine/_work_queue/ranking.py:30:from desloppify.engine._work_queue.synthetic import subjective_strict_scores
+./target-hunt/desloppify/engine/_work_queue/ranking.py:31:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/_work_queue/issues.py:15:from desloppify.engine._work_queue.helpers import detail_dict
+./target-hunt/desloppify/engine/_work_queue/helpers.py:11:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_work_queue/helpers.py:12:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/_work_queue/synthetic_workflow.py:5:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/_work_queue/synthetic_workflow.py:10:    from desloppify.engine._plan.stale_dimensions import WORKFLOW_SCORE_CHECKPOINT_ID
+./target-hunt/desloppify/engine/_work_queue/synthetic_workflow.py:47:    from desloppify.engine._plan.stale_dimensions import WORKFLOW_CREATE_PLAN_ID
+./target-hunt/desloppify/engine/_work_queue/synthetic_workflow.py:72:    from desloppify.engine._plan.stale_dimensions import WORKFLOW_IMPORT_SCORES_ID
+./target-hunt/desloppify/engine/_work_queue/synthetic_workflow.py:103:    from desloppify.engine._plan.stale_dimensions import WORKFLOW_COMMUNICATE_SCORE_ID
+./target-hunt/desloppify/engine/_work_queue/synthetic.py:11:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_work_queue/synthetic.py:12:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/engine/_work_queue/synthetic.py:13:from desloppify.engine._work_queue.helpers import (
+./target-hunt/desloppify/engine/_work_queue/synthetic.py:17:from desloppify.engine._work_queue.synthetic_workflow import (
+./target-hunt/desloppify/engine/_work_queue/synthetic.py:23:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/_work_queue/synthetic.py:103:    from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/engine/_work_queue/core.py:8:from desloppify.engine._plan.subjective_policy import NON_OBJECTIVE_DETECTORS
+./target-hunt/desloppify/engine/_work_queue/core.py:9:from desloppify.engine._work_queue.context import QueueContext
+./target-hunt/desloppify/engine/_work_queue/core.py:10:from desloppify.engine._work_queue.helpers import (
+./target-hunt/desloppify/engine/_work_queue/core.py:15:from desloppify.engine._work_queue.plan_order import (
+./target-hunt/desloppify/engine/_work_queue/core.py:23:from desloppify.engine._work_queue.plan_order import (
+./target-hunt/desloppify/engine/_work_queue/core.py:26:from desloppify.engine._work_queue.ranking import (
+./target-hunt/desloppify/engine/_work_queue/core.py:33:from desloppify.engine._work_queue.synthetic import (
+./target-hunt/desloppify/engine/_work_queue/core.py:41:from desloppify.engine._work_queue.types import WorkQueueItem
+./target-hunt/desloppify/engine/plan.py:10:from desloppify.engine._plan.auto_cluster import (
+./target-hunt/desloppify/engine/plan.py:16:from desloppify.engine._plan.commit_tracking import (
+./target-hunt/desloppify/engine/plan.py:29:from desloppify.engine._plan.epic_triage import (
+./target-hunt/desloppify/engine/plan.py:37:from desloppify.engine._plan.operations_cluster import (
+./target-hunt/desloppify/engine/plan.py:45:from desloppify.engine._plan.operations_lifecycle import (
+./target-hunt/desloppify/engine/plan.py:51:from desloppify.engine._plan.operations_meta import (
+./target-hunt/desloppify/engine/plan.py:56:from desloppify.engine._plan.operations_queue import move_items
+./target-hunt/desloppify/engine/plan.py:57:from desloppify.engine._plan.operations_skip import (
+./target-hunt/desloppify/engine/plan.py:64:from desloppify.engine._plan.persistence import (
+./target-hunt/desloppify/engine/plan.py:73:from desloppify.engine._plan.reconcile import (
+./target-hunt/desloppify/engine/plan.py:81:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/engine/plan.py:101:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/engine/plan.py:126:from desloppify.engine._plan.subjective_policy import (
+./target-hunt/desloppify/engine/_state/__init__.py:10:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_state/__init__.py:20:    from desloppify.engine._scoring.state_integration import recompute_stats
+./target-hunt/desloppify/engine/_state/merge_issues.py:6:from desloppify.engine._state.filtering import matched_ignore_pattern
+./target-hunt/desloppify/engine/_state/filtering.py:20:from desloppify.engine._state.schema import (
+./target-hunt/desloppify/engine/_state/filtering.py:129:    from desloppify.engine._scoring.state_integration import (
+./target-hunt/desloppify/engine/_state/merge_history.py:6:from desloppify.engine._state.schema import ScanDiff, StateModel
+./target-hunt/desloppify/engine/_state/merge.py:14:from desloppify.engine._state.merge_history import (
+./target-hunt/desloppify/engine/_state/merge.py:21:from desloppify.engine._state.merge_issues import (
+./target-hunt/desloppify/engine/_state/merge.py:26:from desloppify.engine._state.schema import (
+./target-hunt/desloppify/engine/_state/merge.py:35:from desloppify.engine._state import _recompute_stats
+./target-hunt/desloppify/engine/_state/persistence.py:19:from desloppify.engine._state.schema import (
+./target-hunt/desloppify/engine/_state/persistence.py:32:from desloppify.engine._state import _recompute_stats
+./target-hunt/desloppify/engine/_state/resolution.py:14:from desloppify.engine._state.filtering import _matches_pattern
+./target-hunt/desloppify/engine/_state/resolution.py:15:from desloppify.engine._state.schema import (
+./target-hunt/desloppify/engine/_state/resolution.py:23:from desloppify.engine._state import _recompute_stats
+./target-hunt/desloppify/engine/_state/scoring.py:12:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_state/schema.py:10:from desloppify.engine._state.schema_scores import (
+./target-hunt/desloppify/engine/concerns.py:21:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_scoring/state_integration.py:14:from desloppify.engine._scoring.detection import merge_potentials
+./target-hunt/desloppify/engine/_scoring/state_integration.py:15:from desloppify.engine._scoring.policy.core import matches_target_score
+./target-hunt/desloppify/engine/_scoring/state_integration.py:16:from desloppify.engine._scoring.results.core import (
+./target-hunt/desloppify/engine/_scoring/state_integration.py:20:from desloppify.engine._scoring.state_coverage import (
+./target-hunt/desloppify/engine/_scoring/state_integration.py:23:from desloppify.engine._state.filtering import path_scoped_issues
+./target-hunt/desloppify/engine/_scoring/state_integration.py:24:from desloppify.engine._state.schema import StateModel, ensure_state_defaults
+./target-hunt/desloppify/engine/_scoring/detection.py:11:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/engine/_scoring/detection.py:17:from desloppify.engine._state.schema import Issue
+./target-hunt/desloppify/engine/_scoring/state_coverage.py:6:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/engine/_scoring/subjective/core.py:6:from desloppify.engine._scoring.policy.core import SUBJECTIVE_CHECKS
+./target-hunt/desloppify/engine/_scoring/results/health.py:6:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/engine/_scoring/results/core.py:7:from desloppify.engine._scoring.detection import detector_stats_by_mode
+./target-hunt/desloppify/engine/_scoring/results/core.py:8:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/engine/_scoring/results/core.py:14:from desloppify.engine._scoring.results.health import (
+./target-hunt/desloppify/engine/_scoring/results/core.py:18:from desloppify.engine._scoring.results.impact import (
+./target-hunt/desloppify/engine/_scoring/results/core.py:22:from desloppify.engine._scoring.subjective.core import (
+./target-hunt/desloppify/engine/_scoring/results/impact.py:5:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/engine/_scoring/results/impact.py:11:from desloppify.engine._scoring.results.health import compute_health_score
+./target-hunt/desloppify/state.py:5:from desloppify.engine._state.filtering import (
+./target-hunt/desloppify/state.py:14:from desloppify.engine._state.merge import (
+./target-hunt/desloppify/state.py:20:from desloppify.engine._state.noise import (
+./target-hunt/desloppify/state.py:28:from desloppify.engine._state.persistence import load_state, save_state
+./target-hunt/desloppify/state.py:29:from desloppify.engine._state.resolution import (
+./target-hunt/desloppify/state.py:34:from desloppify.engine._state.schema import (
+./target-hunt/desloppify/state.py:52:from desloppify.engine._state.schema_scores import (
+./target-hunt/desloppify/state.py:58:from desloppify.engine._state.scoring import (
+./target-hunt/desloppify/app/commands/show/scope.py:11:from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/app/commands/show/scope.py:12:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/app/commands/show/scope.py:13:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/show/scope.py:14:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/app/commands/review/importing/cmd.py:212:        from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/app/commands/review/importing/output.py:9:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/review/merge.py:14:from desloppify.engine._work_queue.issues import list_open_review_issues
+./target-hunt/desloppify/app/commands/review/coordinator.py:12:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/review/packet/build.py:10:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/review/preflight.py:15:from desloppify.engine._work_queue.context import queue_context
+./target-hunt/desloppify/app/commands/suppress.py:24:from desloppify.engine._work_queue.core import ATTEST_EXAMPLE
+./target-hunt/desloppify/app/commands/resolve/queue_guard.py:9:from desloppify.engine._work_queue.context import queue_context
+./target-hunt/desloppify/app/commands/resolve/queue_guard.py:10:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/app/commands/resolve/queue_guard.py:14:from desloppify.engine._work_queue.plan_order import collapse_clusters
+./target-hunt/desloppify/app/commands/resolve/render_support.py:7:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/resolve/selection.py:17:from desloppify.engine._work_queue.core import ATTEST_EXAMPLE
+./target-hunt/desloppify/app/commands/helpers/runtime.py:12:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/helpers/queue_progress.py:15:from desloppify.engine._work_queue import core as work_queue_core_mod
+./target-hunt/desloppify/app/commands/helpers/queue_progress.py:16:from desloppify.engine._work_queue.helpers import is_subjective_queue_item
+./target-hunt/desloppify/app/commands/helpers/queue_progress.py:17:from desloppify.engine._work_queue.plan_order import collapse_clusters
+./target-hunt/desloppify/app/commands/helpers/queue_progress.py:22:    from desloppify.engine._work_queue.context import QueueContext
+./target-hunt/desloppify/app/commands/scan/artifacts.py:21:from desloppify.engine._scoring.results.core import compute_health_breakdown
+./target-hunt/desloppify/app/commands/scan/reporting/integrity_report.py:10:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/scan/reporting/presentation.py:8:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/scan/reporting/subjective.py:8:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/app/commands/scan/reporting/agent_context.py:21:from desloppify.engine._scoring.results.core import compute_health_breakdown
+./target-hunt/desloppify/app/commands/scan/reporting/agent_context.py:22:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/app/commands/scan/reporting/agent_context.py:23:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/scan/reporting/agent_context.py:24:from desloppify.engine._work_queue.core import ATTEST_EXAMPLE
+./target-hunt/desloppify/app/commands/scan/reporting/summary.py:17:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/scan/workflow.py:50:from desloppify.engine._work_queue.issues import expire_stale_holistic
+./target-hunt/desloppify/app/commands/next/render_support.py:9:from desloppify.engine._work_queue.core import group_queue_items
+./target-hunt/desloppify/app/commands/next/cmd.py:26:from desloppify.engine._scoring.detection import merge_potentials
+./target-hunt/desloppify/app/commands/next/cmd.py:27:from desloppify.engine._work_queue.context import queue_context
+./target-hunt/desloppify/app/commands/next/cmd.py:28:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/app/commands/next/cmd.py:32:from desloppify.engine._work_queue.plan_order import collapse_clusters
+./target-hunt/desloppify/app/commands/next/render_nudges.py:18:from desloppify.engine._scoring.results.core import compute_health_breakdown
+./target-hunt/desloppify/app/commands/next/render_nudges.py:19:from desloppify.engine._work_queue.core import ATTEST_EXAMPLE
+./target-hunt/desloppify/app/commands/next/render.py:8:from desloppify.engine._scoring.results.core import (
+./target-hunt/desloppify/app/commands/next/render.py:13:from desloppify.engine._work_queue.helpers import workflow_stage_name
+./target-hunt/desloppify/app/commands/status/render_io.py:8:from desloppify.engine._scoring.results.core import compute_health_breakdown
+./target-hunt/desloppify/app/commands/status/render_dimensions.py:9:from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/app/commands/status/cmd.py:34:from desloppify.engine._scoring.results.core import compute_health_breakdown
+./target-hunt/desloppify/app/commands/status/cmd.py:35:from desloppify.engine._work_queue.context import queue_context
+./target-hunt/desloppify/app/commands/status/render.py:16:from desloppify.engine._scoring.detection import merge_potentials
+./target-hunt/desloppify/app/commands/status/render.py:17:from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/app/commands/status/render.py:18:from desloppify.engine._scoring.results.core import compute_score_impact
+./target-hunt/desloppify/app/commands/status/render.py:19:from desloppify.engine._state.schema import StateModel
+./target-hunt/desloppify/app/commands/plan/queue_render.py:15:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/app/commands/plan/queue_render.py:19:from desloppify.engine._work_queue.plan_order import collapse_clusters
+./target-hunt/desloppify/app/commands/plan/triage/reflect.py:11:from desloppify.engine._plan.epic_triage import (
+./target-hunt/desloppify/app/commands/plan/triage/reflect_dashboard.py:6:from desloppify.engine._plan.epic_triage import detect_recurring_patterns
+./target-hunt/desloppify/app/commands/plan/triage/stage_persistence.py:5:from desloppify.engine._plan.stale_dimensions import review_issue_snapshot_hash
+./target-hunt/desloppify/app/commands/plan/override_handlers.py:31:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/app/commands/plan/override_handlers.py:35:from desloppify.engine._plan.skip_policy import (
+./target-hunt/desloppify/app/commands/plan/override_handlers.py:42:from desloppify.engine._work_queue.core import ATTEST_EXAMPLE
+./target-hunt/desloppify/app/commands/plan/cmd.py:36:from desloppify.engine._plan.annotations import annotation_counts
+./target-hunt/desloppify/app/commands/plan/cmd.py:37:from desloppify.engine._plan.skip_policy import USER_SKIP_KINDS
+./target-hunt/desloppify/app/commands/plan/cluster_handlers.py:14:from desloppify.engine._plan.step_parser import (
+./target-hunt/desloppify/languages/_framework/generic.py:18:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/languages/_framework/resolution.py:18:    from desloppify.engine._scoring.policy.core import reset_registered_scoring_policies
+./target-hunt/desloppify/languages/_framework/discovery.py:122:    from desloppify.engine._scoring.policy.core import reset_registered_scoring_policies
+./target-hunt/desloppify/languages/python/test_coverage.py:81:    ``from desloppify.engine._state import filtering``) resolve to
+./target-hunt/desloppify/tests/lang/common/test_generic_plugin.py:576:        from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/tests/lang/common/test_generic_plugin.py:614:        from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/tests/lang/common/test_generic_plugin.py:625:        from desloppify.engine._scoring.policy.core import DETECTOR_SCORING_POLICIES
+./target-hunt/desloppify/tests/engine/test_queue_context.py:9:from desloppify.engine._work_queue.context import (
+./target-hunt/desloppify/tests/engine/test_queue_context.py:169:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/engine/test_queue_context.py:203:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/review/work_queue_cases.py:5:from desloppify.engine._work_queue.core import QueueBuildOptions
+./target-hunt/desloppify/tests/review/work_queue_cases.py:6:from desloppify.engine._work_queue.core import build_work_queue as _build_work_queue
+./target-hunt/desloppify/tests/review/work_queue_cases.py:335:    from desloppify.engine._work_queue.core import _SCAN_PATH_FROM_STATE
+./target-hunt/desloppify/tests/review/work_queue_cases.py:649:    from desloppify.engine._work_queue.ranking import enrich_with_impact, item_sort_key
+./target-hunt/desloppify/tests/review/work_queue_cases.py:695:    from desloppify.engine._work_queue.ranking import enrich_with_impact, item_sort_key
+./target-hunt/desloppify/tests/review/work_queue_cases.py:837:    from desloppify.engine._work_queue.plan_order import collapse_clusters
+./target-hunt/desloppify/tests/review/work_queue_cases.py:882:    from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/review/work_queue_cases.py:942:    from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/review/work_queue_cases.py:1026:    from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/review/work_queue_cases.py:1096:    from desloppify.engine._work_queue.ranking import item_sort_key
+./target-hunt/desloppify/tests/review/review_coverage_cases.py:13:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:448:        from desloppify.engine._state.merge import merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:449:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:468:        from desloppify.engine._state.merge import merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:469:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:485:        from desloppify.engine._state.merge import merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:486:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:499:        from desloppify.engine._state.merge import merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:500:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:522:        from desloppify.engine._state.merge import merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:523:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:542:        from desloppify.engine._state.merge import merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:543:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:572:        from desloppify.engine._state.merge import MergeScanOptions, merge_scan
+./target-hunt/desloppify/tests/review/context/test_mechanical_evidence.py:573:        from desloppify.engine._state.schema import empty_state
+./target-hunt/desloppify/tests/review/context/test_holistic_review.py:13:from desloppify.engine._scoring.detection import detector_pass_rate
+./target-hunt/desloppify/tests/review/context/test_holistic_review.py:14:from desloppify.engine._scoring.policy.core import HOLISTIC_POTENTIAL
+./target-hunt/desloppify/tests/review/import_scoring/test_review_import_scoring.py:5:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/tests/review/import_scoring/test_review_import_scoring.py:9:from desloppify.engine._scoring.results.core import compute_dimension_scores
+./target-hunt/desloppify/tests/detectors/security/test_security.py:12:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/tests/detectors/security/test_security.py:17:from desloppify.engine._scoring.results.core import compute_dimension_scores
+./target-hunt/desloppify/tests/scan/test_post_scan_logging.py:5:from desloppify.engine._plan.operations_meta import append_log_entry
+./target-hunt/desloppify/tests/scan/test_post_scan_logging.py:6:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/test_queue_progress.py:21:from desloppify.engine._work_queue.helpers import is_subjective_queue_item
+./target-hunt/desloppify/tests/commands/resolve/test_cmd_resolve.py:17:from desloppify.engine._work_queue.core import ATTEST_EXAMPLE
+./target-hunt/desloppify/tests/commands/scan/test_plan_reconcile.py:15:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/scan/test_plan_reconcile.py:16:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/tests/commands/scan/test_plan_reconcile.py:185:        from desloppify.engine._plan.reconcile import reconcile_plan_after_scan
+./target-hunt/desloppify/tests/commands/scan/test_plan_reconcile.py:198:        from desloppify.engine._plan.reconcile import reconcile_plan_after_scan
+./target-hunt/desloppify/tests/commands/scan/test_cmd_scan.py:31:from desloppify.engine._scoring.policy.core import DIMENSIONS
+./target-hunt/desloppify/tests/commands/test_queue_order_guard.py:8:from desloppify.engine._plan.persistence import save_plan
+./target-hunt/desloppify/tests/commands/test_queue_order_guard.py:9:from desloppify.engine._plan.schema import empty_plan, ensure_plan_defaults
+./target-hunt/desloppify/tests/commands/test_lifecycle_transitions.py:20:from desloppify.engine._plan.operations_lifecycle import purge_ids
+./target-hunt/desloppify/tests/commands/test_lifecycle_transitions.py:21:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/test_lifecycle_transitions.py:22:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/tests/commands/test_lifecycle_transitions.py:27:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:15:from desloppify.engine._plan.subjective_policy import compute_subjective_visibility
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:16:from desloppify.engine._state.merge_issues import auto_resolve_disappeared
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:165:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:198:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:226:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:326:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:353:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:386:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/test_queue_count_consistency.py:409:        from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/commands/plan/test_cluster_ux.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_dependency_guard.py:9:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_dependency_guard.py:10:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_triage_confirmation.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_confirmation.py:9:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_cluster_guard.py:9:from desloppify.engine._plan.schema import empty_plan, ensure_plan_defaults
+./target-hunt/desloppify/tests/commands/plan/test_triage_fold_confirm.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_fold_confirm.py:9:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_workflow_gates.py:17:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_workflow_gates.py:18:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/tests/commands/plan/test_cluster_merge.py:7:from desloppify.engine._plan.operations_cluster import merge_clusters
+./target-hunt/desloppify/tests/commands/plan/test_cluster_merge.py:8:from desloppify.engine._plan.schema import empty_plan, ensure_plan_defaults
+./target-hunt/desloppify/tests/commands/plan/test_move_unified.py:7:from desloppify.engine._plan.operations_queue import move_items
+./target-hunt/desloppify/tests/commands/plan/test_move_unified.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_jump_back.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_jump_back.py:9:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_triage_logging.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_logging.py:9:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_triage_auto_start.py:8:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_auto_start.py:9:from desloppify.engine._plan.stale_dimensions import TRIAGE_IDS, TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_triage_coverage.py:6:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_coverage.py:7:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/plan/test_triage_attestation.py:12:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/commands/plan/test_triage_attestation.py:13:from desloppify.engine._plan.stale_dimensions import TRIAGE_STAGE_IDS
+./target-hunt/desloppify/tests/commands/test_scope_matches.py:5:from desloppify.engine._work_queue.helpers import scope_matches
+./target-hunt/desloppify/tests/commands/test_transitive_engine.py:37:from desloppify.engine._state.merge import MergeScanOptions, merge_scan
+./target-hunt/desloppify/tests/commands/test_transitive_engine.py:89:        from desloppify.engine._state.schema import empty_state, ensure_state_defaults
+./target-hunt/desloppify/tests/plan/test_plan_refactor_helpers.py:5:from desloppify.engine._plan.annotations import (
+./target-hunt/desloppify/tests/plan/test_plan_refactor_helpers.py:11:from desloppify.engine._plan.promoted_ids import (
+./target-hunt/desloppify/tests/plan/test_plan_refactor_helpers.py:16:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/plan/test_plan_refactor_helpers.py:17:from desloppify.engine._plan.skip_policy import (
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:5:from desloppify.engine._plan.auto_cluster import (
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:9:from desloppify.engine._plan.cluster_strategy import (
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:13:from desloppify.engine._plan.operations_cluster import (
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:18:from desloppify.engine._plan.schema import empty_plan, ensure_plan_defaults
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:19:from desloppify.engine._work_queue.core import (
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:23:from desloppify.engine._work_queue.plan_order import (
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:26:from desloppify.engine._work_queue.ranking import item_sort_key
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:427:    from desloppify.engine._plan.cluster_strategy import generate_action as _generate_action
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:443:    from desloppify.engine._plan.cluster_strategy import strip_guidance_examples as _strip_guidance_examples
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:703:    from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/tests/plan/test_auto_cluster.py:730:    from desloppify.engine._state.schema import utc_now
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:5:from desloppify.engine._plan.reconcile import reconcile_plan_after_scan
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:6:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:7:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:411:    from desloppify.engine._plan.auto_cluster import auto_cluster_issues
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:439:    from desloppify.engine._plan.auto_cluster import auto_cluster_issues
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:460:    from desloppify.engine._plan.auto_cluster import auto_cluster_issues
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:487:    from desloppify.engine._plan.auto_cluster import auto_cluster_issues
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:650:    from desloppify.engine._plan.operations_lifecycle import reset_plan
+./target-hunt/desloppify/tests/plan/test_stale_dimensions.py:664:    from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/tests/plan/test_schema_migrations.py:5:from desloppify.engine._plan import schema_migrations as migrations
+./target-hunt/desloppify/tests/plan/test_skip.py:5:from desloppify.engine._plan.operations_cluster import (
+./target-hunt/desloppify/tests/plan/test_skip.py:9:from desloppify.engine._plan.operations_lifecycle import purge_ids
+./target-hunt/desloppify/tests/plan/test_skip.py:10:from desloppify.engine._plan.operations_meta import append_log_entry
+./target-hunt/desloppify/tests/plan/test_skip.py:11:from desloppify.engine._plan.operations_queue import move_items
+./target-hunt/desloppify/tests/plan/test_skip.py:12:from desloppify.engine._plan.operations_skip import (
+./target-hunt/desloppify/tests/plan/test_skip.py:17:from desloppify.engine._plan.reconcile import reconcile_plan_after_scan
+./target-hunt/desloppify/tests/plan/test_skip.py:18:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/tests/plan/test_subjective_policy.py:5:from desloppify.engine._plan.subjective_policy import (
+./target-hunt/desloppify/tests/plan/test_epic_triage_apply.py:5:from desloppify.engine._plan.epic_triage_apply import (
+./target-hunt/desloppify/tests/plan/test_epic_triage_apply.py:9:from desloppify.engine._plan.epic_triage_prompt import DismissedIssue, TriageResult
+./target-hunt/desloppify/tests/plan/test_epic_triage_apply.py:10:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/desloppify/tests/plan/test_epic_triage_apply.py:11:from desloppify.engine._plan.stale_dimensions import review_issue_snapshot_hash
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:5:from desloppify.engine._plan.epic_triage import (
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:12:from desloppify.engine._plan.reconcile import reconcile_plan_after_scan
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:13:from desloppify.engine._plan.schema import (
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:21:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:27:from desloppify.engine._work_queue.synthetic import build_triage_stage_items
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:66:        from desloppify.engine._plan.schema import PLAN_VERSION
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:705:        from desloppify.engine._plan.operations_cluster import create_cluster
+./target-hunt/desloppify/tests/plan/test_epic_triage.py:714:        from desloppify.engine._plan.operations_lifecycle import set_focus
+./target-hunt/desloppify/tests/plan/test_suffix_matching.py:5:from desloppify.engine._state.filtering import _matches_pattern
+./target-hunt/desloppify/tests/plan/test_suffix_matching.py:52:    from desloppify.engine._state.resolution import match_issues
+./target-hunt/desloppify/tests/plan/test_suffix_matching.py:76:    from desloppify.engine._state.resolution import match_issues
+./target-hunt/desloppify/tests/plan/test_commit_tracking.py:53:    from desloppify.engine._scoring.results import core as scoring_core
+./target-hunt/desloppify/tests/plan/test_stale_policy.py:7:from desloppify.engine._plan.stale_policy import (
+./target-hunt/desloppify/tests/plan/test_reconcile.py:5:from desloppify.engine._plan.operations_cluster import add_to_cluster, create_cluster
+./target-hunt/desloppify/tests/plan/test_reconcile.py:6:from desloppify.engine._plan.reconcile import reconcile_plan_after_scan
+./target-hunt/desloppify/tests/plan/test_reconcile.py:7:from desloppify.engine._plan.schema import empty_plan, ensure_plan_defaults
+./target-hunt/desloppify/tests/state/test_suppression_scoring.py:5:from desloppify.engine._scoring.detection import _iter_scoring_candidates
+./target-hunt/desloppify/tests/state/test_suppression_scoring.py:6:from desloppify.engine._state.filtering import (
+./target-hunt/desloppify/tests/state/test_suppression_scoring.py:10:from desloppify.engine._state.merge_issues import upsert_issues
+./target-hunt/desloppify/tests/state/test_suppression_scoring.py:11:from desloppify.engine._scoring.state_integration import _count_issues
+./target-hunt/desloppify/tests/state/test_state.py:8:from desloppify.engine._state import filtering as state_query_mod
+./target-hunt/desloppify/tests/state/test_state_internal_scoring_direct.py:6:from desloppify.engine._state.scoring import suppression_metrics
+./target-hunt/desloppify/tests/scoring/test_scoring.py:7:from desloppify.engine._scoring.detection import (
+./target-hunt/desloppify/tests/scoring/test_scoring.py:11:from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/tests/scoring/test_scoring.py:19:from desloppify.engine._scoring.results.core import (
+./target-hunt/desloppify/tests/scoring/test_scoring.py:27:from desloppify.engine._scoring.subjective.core import DISPLAY_NAMES
+./target-hunt/desloppify/tests/scoring/test_scoring.py:832:        from desloppify.engine._scoring.policy.core import (
+./target-hunt/desloppify/tests/scoring/test_scoring.py:1058:        from desloppify.engine._scoring.policy.core import SUBJECTIVE_WEIGHT_FRACTION
+./target-hunt/desloppify/tests/scoring/test_scoring_review_exclusion.py:7:from desloppify.engine._scoring.detection import (
+./target-hunt/desloppify/tests/scoring/test_scoring_review_exclusion.py:11:from desloppify.engine._scoring.policy.core import SCORING_MODES
+./target-hunt/desloppify/tests/scoring/test_scoring_review_exclusion.py:12:from desloppify.engine._scoring.results.core import compute_score_bundle
+./target-hunt/scripts/lifecycle_walkthrough.py:30:from desloppify.engine._plan.operations_lifecycle import purge_ids
+./target-hunt/scripts/lifecycle_walkthrough.py:31:from desloppify.engine._plan.schema import empty_plan
+./target-hunt/scripts/lifecycle_walkthrough.py:32:from desloppify.engine._plan.stale_dimensions import (
+./target-hunt/scripts/lifecycle_walkthrough.py:41:from desloppify.engine._state.schema import empty_state, utc_now
