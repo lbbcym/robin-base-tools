@@ -1,21 +1,21 @@
-import { ethers } from 'ethers';
+import { formatEther, parseEther, isAddress } from 'ethers';
 
 export const formatWei = (amount: string): string => {
-  return ethers.utils.formatEther(amount);
+  return formatEther(amount);
 };
 
 export const parseWei = (amount: string): string => {
-  return ethers.utils.parseEther(amount).toString();
+  return parseEther(amount).toString();
 };
 
 export const isValidAddress = (address: string): boolean => {
-  return ethers.utils.isAddress(address);
+  return isAddress(address);
 };
 
 export const getBaseChainId = (): number => {
-  return 8453; // Base Mainnet Chain ID
+  return 8453;
 };
 
 export const getBaseTestnetChainId = (): number => {
-  return 84531; // Base Goerli Testnet Chain ID
+  return 84531;
 };
